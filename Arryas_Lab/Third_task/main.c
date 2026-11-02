@@ -6,6 +6,7 @@ int main()
 {
     int** dynamic_matrix;
     int i , j, matrix_size;
+    float Z;
     srand(time(NULL));
 
     printf("Enter the size of matrix: \n");
@@ -51,7 +52,8 @@ int main()
 
         printf("Max: %d\n", max_element);
         printf("Min: %d\n", min_element);
-
+        Z = (float)min_element / ((float)max_element + (float)min_element);
+        printf("Z: %f\n", Z);
        free(dynamic_matrix);
 
     return 0;
